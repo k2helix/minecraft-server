@@ -3,7 +3,7 @@
 ###############################################################################
 # Change these
 ###############################################################################
-NEXTCLOUD_PROVIDER="https://cloud.disroot.org"
+NEXTCLOUD_PROVIDER="https://sam.nl.tab.digital"
 USERNAME="YOUR NEXTCLOUD USERNAME"
 PASSWORD="YOUR NEXTCLOUD PASSWORD"
 DEFAULT_FILE="world.zip"
