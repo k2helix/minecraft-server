@@ -21,7 +21,7 @@ First make sure to have all the needed requirements installed and on PATH (check
 
 ### Options
 You can set different options in the files.
-- JAVA_BINARY: path to the java executable/binary (useful if you have different java versions). **Note that specific minecraft versions require specific java versions** (for example Minecraft 1.17 requires JAVA SE Development Kit >=16).
+- JAVA_BINARY: path to the java executable/binary. (useful if you have different java versions). It can be "java" if you have it on PATH. **Note that specific minecraft versions require specific java versions** (for example Minecraft 1.17 requires JAVA SE Development Kit >=16).
 - WEBHOOK_URL: url of a Discord webhook of the channel where you want the server ip to be sent. If you don't want to set one leave it blank and delete from line 10 to 14 of start.sh (the ip is also logged in the command line).
 - NEXTCLOUD_PROVIDER: the nextcloud provider url you chose for the cloud saving (download.sh and upload.sh files). Consider using [one with a good amount of storage](https://sam.nl.tab.digital) as minecraft worlds are usually big in terms of size. 
 
