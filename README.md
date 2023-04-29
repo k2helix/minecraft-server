@@ -1,6 +1,6 @@
 ## What is this?
 This repo contains various files which you can use to host and share a Minecraft server on your PC or wherever you want.
-- init.sh: This file contains a startup script which you can run to set up your server quickly. It will autodownload some required tools such as java and playit which both need to be in the `binaries` folder for `start.sh` to work if it's not changed.
+- init.sh: This file contains a startup script which you can run to set up your server quickly. It will automatically download some required tools such as java and playit which both need to be in the `binaries` folder for `start.sh` to work if it's not changed.
 - start.sh: This is the file you need to execute when you want to start the server. You can find some configurable options in it such as the maximum and minimum RAM and other Java options. It defaults Java and Playit paths to `./binaries/`, which can be downloaded from the `init.sh` script. Else you can just change its path and configure them manually.
 - upload.sh: This file is used to upload the current world to the cloud (Nextcloud), so someone on a different machine can download it later to continue playing. (not needed if the host is going to be the same always). It may also be used as a backup to restore it (by downloading) if something weird happens. Mods, config and server files can also be uploaded by specifying it: ./upload.sh world.zip(default)/config.zip/mods.zip/server.zip
 - download.sh: This file is used to download the current uploaded world from the cloud (Nextcloud). It will replace the current "world" directory so make sure that you don't download if your current progress is higher than that of the uploaded world to avoid losing progress. Mods, config and server files can also be downloaded by specifying it: ./download.sh world.zip(default)/config.zip/mods.zip/server.zip
@@ -16,7 +16,7 @@ This repo contains various files which you can use to host and share a Minecraft
 - On Windows, you will also need [Git](https://git-scm.com/) Bash in order to run .sh files.
 
 ## Installation
-First make sure to have all the needed requirements installed and on PATH (check if you can call "ngrok", "jq", "java" and "jar" from the command line). Also make sure the minecraft server jar of the version you are going to play works with your JAVA_BINARY, else everything else will fail.
+First make sure to have all the needed requirements installed and on PATH (check if you can call "jq", "java" and "jar" from the command line). Also make sure the minecraft server jar of the version you are going to play works with your JAVA_BINARY, else everything else will fail.
 1. Download `init.sh` and optionally the rest of files
 2. Run `init.sh` and complete the setup
 4. Run `start.sh` if `server.jar` exists
