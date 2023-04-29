@@ -1,15 +1,9 @@
 ###############################################################################
-# Change these
-###############################################################################
-JAVA_BINARY="java"
-WEBHOOK_URL="YOUR WEBHOOK URL"
+JAVA_BINARY="./binaries/jdk-17.0.6/bin/java"
+PLAYIT_COMMAND="./binaries/playit/playit -c ./binaries/playit/playit.toml"
+export JAVA_TOOL_OPTIONS="-Xms14G -Xmx14G -XX:+UseG1GC -Dsun.rmi.dgc.server.gcInterval=2147483646 -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M"
 ###############################################################################
 
-url="$(ngrok tcp 25565 > /dev/null & sleep 5 && curl "127.0.0.1:4040/api/tunnels/command_line" --silent | jq -r .public_url)";
-echo $url
-curl "$WEBHOOK_URL" \
- --silent \
- --request POST \
- --header "Content-Type: application/json" \
- --data "{\"embeds\":[{\"color\":59389,\"description\":\"The server ip is $url\"}]}" \ 
-"$JAVA_BINARY" -jar server.jar
+./check.sh || exit 0;
+$PLAYIT_COMMAND > /dev/null & reset && "$JAVA_BINARY" -jar server.jar nogui
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
