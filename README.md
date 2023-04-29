@@ -28,4 +28,4 @@ You can set different options when running `init.sh`.
 - Nextcloud Password: the password of your nextcloud account for the given provider. Note that if you use OTP (2 factor authentication) you will need to pass a special access password which you can get from Nextcloud's security tab.
 
 ### Notes
-As said before, if you want to use your machine's java or playit, just change its path in `start.sh` and link your machine as a playit agent. You may also remove the `-c` argument as playit automatically handles it.
+As said before, if you want to use your machine's java or playit, just change its path in `start.sh` and link your machine as a playit agent. You may also remove the `-c` argument as playit automatically handles it. If you prefer using `ngrok`, switch to its branch in this same repo.
