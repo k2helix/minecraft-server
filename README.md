@@ -22,7 +22,7 @@ First make sure to have all the needed requirements installed and on PATH (check
 4. Run `start.sh` if `server.jar` exists
 
 ### Options
-You can set different options in the files.
+You can set different options when running `init.sh`.
 - Nextcloud Provider URL: the nextcloud provider url you chose for the cloud saving (download.sh and upload.sh files). Consider using [one with a good amount of storage](https://tab.digital/) as minecraft worlds are usually big.
 - Nextcloud Username: the username of your nextcloud account for the given provider.
 - Nextcloud Password: the password of your nextcloud account for the given provider. Note that if you use OTP (2 factor authentication) you will need to pass a special access password which you can get from Nextcloud's security tab.
